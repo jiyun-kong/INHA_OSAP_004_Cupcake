@@ -1,5 +1,5 @@
 #include "avl_tree.hpp"
 
-void AvlTree::minimum(int x){
+void AvlTree::minimum(const int& x){
 
 }

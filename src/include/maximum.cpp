@@ -1,5 +1,5 @@
 #include "avl_tree.hpp"
 
-void AvlTree::maximum(int x){
+void AvlTree::maximum(const int& x){
 
 }

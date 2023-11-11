@@ -1,5 +1,5 @@
 #include "avl_tree.hpp"
 
-int AvlTree::find(int x){
+int AvlTree::find(const int& x){
 
 }
