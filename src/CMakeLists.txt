@@ -1,3 +1,6 @@
+# Copyright 2023 CUPCAKE Team, Inha Univ 
+# released under GPL 3.0 License
+
 #INHA_OSAP_004_Cupcake/src/CMakeLists.txt
 
 add_subdirectory(tests)

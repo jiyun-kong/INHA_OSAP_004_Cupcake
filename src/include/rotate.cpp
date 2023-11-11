@@ -1,3 +1,7 @@
+/*
+* Copyright 2023 CUPCAKE Team, Inha Univ 
+* released under GPL 3.0 License
+*/
 #include "avl_tree.hpp"
 
 // do not change order of comparement conditions to prevent accessing null

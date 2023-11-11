@@ -1,3 +1,7 @@
+/*
+* Copyright 2023 CUPCAKE Team, Inha Univ 
+* released under GPL 3.0 License
+*/
 #ifndef INHA_OSAP_004_CUPCAKE_SRC_INCLUDE_AVL_TREE_H
 #define INHA_OSAP_004_CUPCAKE_SRC_INCLUDE_AVL_TREE_H
 
