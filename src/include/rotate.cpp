@@ -7,7 +7,7 @@
 // do not change order of comparement conditions to prevent accessing null
 // pointer
 
-void AvlTree::rebalance(Node *&node_ptr, const int &key) {
+void AvlTree::rebalance_subtree(Node *&node_ptr, const int &key) {
   int balance_factor = get_balance_factor(node_ptr);
 
   // LL case
