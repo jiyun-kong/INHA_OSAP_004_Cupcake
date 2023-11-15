@@ -1,2 +1,0 @@
-/usr/bin/ar qc libAvlTreeLibrary.a CMakeFiles/AvlTreeLibrary.dir/empty.cpp.o CMakeFiles/AvlTreeLibrary.dir/find.cpp.o CMakeFiles/AvlTreeLibrary.dir/get_height.cpp.o CMakeFiles/AvlTreeLibrary.dir/insert.cpp.o CMakeFiles/AvlTreeLibrary.dir/maximum.cpp.o CMakeFiles/AvlTreeLibrary.dir/minimum.cpp.o CMakeFiles/AvlTreeLibrary.dir/rotate.cpp.o
-/usr/bin/ranlib libAvlTreeLibrary.a
