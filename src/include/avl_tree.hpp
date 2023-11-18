@@ -1,10 +1,10 @@
 /*
  * Copyright 2023 CUPCAKE Team, Inha Univ
  * released under GPL 3.0 License
- * Contributor of this file : SungraeKim (23/11/11)
+ * Contributor of this file : SungraeKim (23/11/11), BongChannavong (23/11/17)
  */
 
-//this header file define 2 class for AvlTree and its node
+// this header file define 2 class for AvlTree and its node
 #ifndef INHA_OSAP_004_CUPCAKE_SRC_INCLUDE_AVL_TREE_H
 #define INHA_OSAP_004_CUPCAKE_SRC_INCLUDE_AVL_TREE_H
 
@@ -57,16 +57,21 @@ private:
   int size_;
 
   int get_node_height(Node *node_ptr) const;
+  int get_node_depth(Node *node_prt) const;
+  
   int get_balance_factor(
       Node *node_ptr) const; // caculate balance factor of given node
   Node *recursive_insert(
       Node *node_ptr,
       const int &key); // recursively move to a proper child position & make new
                        // node & update height & rebalance tree
-  void rebalance_subtree(Node *&node_ptr,
-                 const int &key); // rebalance subtree in LL,LR,RL,RR cases
+  void
+  rebalance_subtree(Node *&node_ptr,
+                    const int &key); // rebalance subtree in LL,LR,RL,RR cases
   Node *rotate_left(Node *center_node);
   Node *rotate_right(Node *center_node);
+
+  
 };
 
 #endif
