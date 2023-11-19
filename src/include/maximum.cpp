@@ -6,18 +6,27 @@
 #include "avl_tree.hpp"
 #include <iostream> 
 
-void AvlTree::maximum(const int& x){ 
-    Node* node_ptr = root_; 
-    while(node_ptr != nullptr){ // Loop until the node pointer is not null
-        if(node_ptr->get_key() == x){ // Check if the key of the current node is equal to the input value
-            std::cout << node_ptr->get_key() << " " << get_node_depth(node_ptr) << std::endl;
-            return;
-        }
-        else if(node_ptr->get_key() < x){ // Check if the key of the current node is less than the input value
-            node_ptr = node_ptr->get_right_child(); // Move to the right child of the current node
-        }
-        else{ 
-            node_ptr = node_ptr->get_left_child(); // Move to the left child of the current node
+void AvlTree::maximum(const int &x) {
+    // Find the node with the given key in the subtree rooted at x
+    Node *current = root_;
+    while (current != nullptr && current->get_key() != x) {
+        if (x < current->get_key()) {
+            current = current->get_left_child();
+        } else {
+            current = current->get_right_child();
         }
     }
+
+    if (current == nullptr) {
+        return;
+    }
+
+    // Find the maximum key in the subtree rooted at the current node
+    while (current->get_right_child() != nullptr) {
+        current = current->get_right_child();
+    }
+
+    // Print key and depth values of the node
+    std::cout << current->get_key() << " " << get_node_depth(current) << std::endl;
 }
+

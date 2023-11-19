@@ -9,5 +9,10 @@
 using namespace std;
 
 int main() {
-    
+    AvlTree test;
+    test.insert(4);
+    test.insert(6);
+    test.insert(7);
+    test.insert(3);
+    test.find(7);
 }
