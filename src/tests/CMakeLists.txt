@@ -1,6 +1,6 @@
 # Copyright 2023 CUPCAKE Team, Inha Univ 
 # released under GPL 3.0 License
-
+# Contributor of this file : SungraeKim (23/11/11), JiyunKong (23/11/13)
 # INHA_OSAP_004_Cupcake/src/tests/CMakeLists.txt
 
 find_package(GTest REQUIRED)
