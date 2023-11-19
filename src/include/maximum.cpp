@@ -29,4 +29,3 @@ void AvlTree::maximum(const int &x) {
     // Print key and depth values of the node
     std::cout << current->get_key() << " " << get_node_depth(current) << std::endl;
 }
-

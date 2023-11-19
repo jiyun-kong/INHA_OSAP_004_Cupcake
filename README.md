@@ -20,3 +20,17 @@ Error resolved after adding the following code.
 
 `target_link_libraries(unitTest PUBLIC AvlTreeLibrary GTest::GTest GTest::Main)`<br/>
 `find_package(GTest REQUIRED)`
+
+## 2nd Week (Nov.16 ~ Nov.20)
+- **Implementation : find(), maximum(), minimum()** by. Bong Channavong
+- **Code Review** by. Sungrae Kim
+- **Google Test, implement main() for Basic functions** by. Jiyun Kong
+
+## 3rd Week (Nov.21 ~ Nov.26)
+- **Implementation : rank()** by. Jiyun Kong
+- **Implementation : erase()** by. GyuJun Cho
+- **Code Review** by. Bong Channavong, Jiyun Kong
+- **Google Test, implement main() for Advanced functions** by. Sungrae 
+
+## 4th Week (Dec.9 ~ Dec.15)
+
