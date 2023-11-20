@@ -17,8 +17,10 @@ Node *AvlTree::recursive_insert(Node *node_ptr, const int &key) {
   } else if (node_ptr->get_key() < key) {
     node_ptr->set_right_child(
         recursive_insert(node_ptr->get_right_child(), key));
+    node_ptr->get_right_child()->set_parent(node_ptr);
   } else {
     node_ptr->set_left_child(recursive_insert(node_ptr->get_left_child(), key));
+    node_ptr->get_left_child()->set_parent(node_ptr);
   }
   node_ptr->set_height(std::max(get_node_height(node_ptr->get_left_child()),
                                 get_node_height(node_ptr->get_right_child())) + 1);
