@@ -14,10 +14,11 @@ int main() {
   cin.tie(NULL);
   cout.tie(NULL);
 
-  AvlTree tree;
+ 
   int T;
   cin >> T;
   for (int i=0; i<T; i++) { // repeat for test case T times
+    AvlTree tree;
     int Q;
     cin >> Q;
     for (int j=0; j<Q; j++) { // repeat for command Q times
