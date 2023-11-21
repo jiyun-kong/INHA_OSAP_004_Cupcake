@@ -13,7 +13,7 @@
 class Node {
 public:
   Node(const int &key)
-      : key_(key), height_(0), parent_(nullptr), left_child_(nullptr),
+      : key_(key), height_(0),left_child_(nullptr),
         right_child_(nullptr) {}
 
   int get_key() const { return key_; }
@@ -21,8 +21,6 @@ public:
     return height_;
   } // may not use in AvlTree. Instead, use get_node_height declared in AvlTree
   void set_height(const int &height) { height_ = height; }
-  Node *get_parent() const { return parent_; }
-  void set_parent(Node *parent) { parent_ = parent; }
   Node *get_left_child() const { return left_child_; }
   void set_left_child(Node *left_child) { left_child_ = left_child; }
   Node *get_right_child() const { return right_child_; }
@@ -31,7 +29,6 @@ public:
 private:
   int key_;
   int height_;
-  Node *parent_;
   Node *left_child_;
   Node *right_child_;
 };
@@ -66,8 +63,7 @@ private:
       const int &key); // recursively move to a proper child position & make new
                        // node & update height & rebalance tree
   void
-  rebalance_subtree(Node *&node_ptr,
-                    const int &key); // rebalance subtree in LL,LR,RL,RR cases
+  rebalance_subtree(Node *&node_ptr); // rebalance subtree in LL,LR,RL,RR cases
   Node *rotate_left(Node *center_node);
   Node *rotate_right(Node *center_node);
 
