@@ -5,20 +5,35 @@
  */
 
 #include "avl_tree.hpp"
-#include <iostream> 
+#include <iostream>
 
 using namespace std;
 
-void AvlTree::minimum(const int &x) { // Define the minimum function that takes an integer reference as input
-  Node *node_ptr = root_; // Initialize a pointer to the root node of the AVL tree
-  while (node_ptr != nullptr) { // Iterate until the node pointer is not null
-    if (node_ptr->get_key() == x) { // Check if the key of the current node is equal to the input value
-      cout << node_ptr->get_key() << " " << get_node_depth(node_ptr) << "\n"; // Print the key, depth of the current node
-      return;
-    } else if (node_ptr->get_key() < x) { // Check if the key of the current node is less than the input value
-      node_ptr = node_ptr->get_right_child(); // Move to the right child of the current node
-    } else { 
-      node_ptr = node_ptr->get_left_child(); // Move to the left child of the current node
+void AvlTree::minimum(const int &x)
+{ // Define the minimum function that takes an integer reference as input
+  Node *node_ptr = root_;
+  while (node_ptr != nullptr && node_ptr->get_key() != x)
+  { // Loop until the node pointer is not null
+    if (node_ptr->get_key() > x)
+    {                                        // Check if the key of the current node is less than the input value
+      node_ptr = node_ptr->get_left_child(); // Move to the right child of the current node
+    }
+    else
+    {
+      node_ptr = node_ptr->get_right_child(); // Move to the left child of the current node
     }
   }
+
+  if (node_ptr == nullptr)
+  {
+    return;
+  }
+
+  // Find the left node in the subtree which has the minimum key
+  while (node_ptr->get_left_child() != nullptr)
+  {
+    node_ptr = node_ptr->get_left_child();
+  }
+
+  cout << node_ptr->get_key() << " " << get_node_depth(node_ptr) << "\n";
 }
