@@ -27,5 +27,5 @@ void AvlTree::maximum(const int& x){
         node_ptr = node_ptr->get_right_child();
     }
 
-    cout << node_ptr->get_key() << " " << get_node_depth(node_ptr) << "\n";
+    cout << node_ptr->get_key() << " " << find(node_ptr->get_key())<< "\n";
 }

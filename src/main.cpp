@@ -50,6 +50,7 @@ int main() {
         int value;
         cin >> value;
         tree.insert(value);
+        cout<<tree.find(value)<<"\n";
       } 
     }
   }
