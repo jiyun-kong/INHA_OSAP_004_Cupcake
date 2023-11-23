@@ -30,6 +30,10 @@ Error resolved after adding the following code.
 - There's a time limit issue when we test at DomJudge server.
 - Probable Cause : Invalid implementation of Minimum(), Maximum() or main() or get_depth() 
 - SungRae found that get_depth() is O(n) so replace get_depth() into find()
+<p align="Center">
+  <img src="https://github.com/jiyun-kong/INHA_OSAP_004_Cupcake/assets/62550230/a19f54b3-16b1-4d11-87b3-f980db54fc68" title="Time Limit issue"/>
+</p><br/>
+
   
 ## 3rd Week (Nov.21 ~ Nov.26)
 - **Implementation : rank()** by. Bond Channavong
