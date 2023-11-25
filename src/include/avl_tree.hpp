@@ -25,7 +25,6 @@ public:
   void set_left_child(Node *left_child) { left_child_ = left_child; }
   Node *get_right_child() const { return right_child_; }
   void set_right_child(Node *right_child) { right_child_ = right_child; }
-
 private:
   int key_;
   int height_;
@@ -48,6 +47,8 @@ public:
   int find(const int &x); // return depth of node with given key. If not exist,
                           // return 0
   void insert(const int &x);
+
+  void printRank(int key);
 
 private:
   Node *root_;

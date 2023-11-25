@@ -4,7 +4,7 @@
 * Contributor of this file : SungraeKim (23/11/11), JiyunKong (23/11/19)
 */
 #include <iostream>
-#include "include/avl_tree.hpp"
+#include "../include/avl_tree.hpp"
 
 using namespace std;
 
