@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/unitTest.dir/test.cpp.o -o unitTest  ../include/libAvlTreeLibrary.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a 
