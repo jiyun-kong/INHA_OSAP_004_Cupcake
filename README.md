@@ -36,11 +36,10 @@ Error resolved after adding the following code.
 
   
 ## 3rd Week (Nov.21 ~ Nov.26)
-- **Implementation : rank()** by. Bond Channavong
-- **Implementation : erase()** by. GyuJun Cho
-- **implement main() for Advanced functions, applying Design Pattern** by. Jiyun Long
-- **Code Review** by. GyuJun Cho, Jiyun Kong
+- **Implementation : rank()** by. Bong Channavong
+
+## 4th Week (Dec.9 ~ Dec.12)
+- **Implementation : erase()** by. Bong Channavong
+- **implement main() for Advanced functions, applying Design Pattern** by. Jiyun Kong
+- **Code Review** by. Sungrae Kim, Jiyun Kong
 - **Google Test** by. Sungrae Kim
-
-## 4th Week (Dec.9 ~ Dec.15)
-
