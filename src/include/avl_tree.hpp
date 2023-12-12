@@ -50,6 +50,8 @@ public:
 
   void printRank(int key);
 
+  void erase(int key);
+
 private:
   Node *root_;
   int size_;
