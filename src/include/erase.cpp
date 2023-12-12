@@ -26,7 +26,7 @@ Node *AvlTree::erase_node(Node* root, int key, int& depth) {
         root->set_right_child(erase_node(root->get_right_child(), key, depth));
     } else {
         // Node found, update depth
-        depth = get_node_depth(root);
+        depth = find(root->get_key());
 
         // Node with only one child or no child
         if (root->get_left_child() == nullptr) {
