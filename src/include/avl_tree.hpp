@@ -13,8 +13,7 @@
 class Node {
 public:
   Node(const int &key)
-      : key_(key), height_(0),left_child_(nullptr),
-        right_child_(nullptr) {}
+      : key_(key), height_(0), left_child_(nullptr), right_child_(nullptr) {}
 
   int get_key() const { return key_; }
   int get_height() const {
@@ -25,6 +24,10 @@ public:
   void set_left_child(Node *left_child) { left_child_ = left_child; }
   Node *get_right_child() const { return right_child_; }
   void set_right_child(Node *right_child) { right_child_ = right_child; }
+
+  // Add this set_key function
+  void set_key(const int &key) { key_ = key; }
+
 private:
   int key_;
   int height_;
@@ -50,13 +53,15 @@ public:
 
   void printRank(int key);
 
+  void erase(int key);
+
 private:
   Node *root_;
   int size_;
 
   int get_node_height(Node *node_ptr) const;
   int get_node_depth(Node *node_prt) const;
-  
+
   int get_balance_factor(
       Node *node_ptr) const; // caculate balance factor of given node
   Node *recursive_insert(
@@ -67,8 +72,8 @@ private:
   rebalance_subtree(Node *&node_ptr); // rebalance subtree in LL,LR,RL,RR cases
   Node *rotate_left(Node *center_node);
   Node *rotate_right(Node *center_node);
-
-  
+  Node *erase_node(Node *root, int key, int &depth);
+  Node *find_min_node(Node *node) const;
 };
 
 #endif
