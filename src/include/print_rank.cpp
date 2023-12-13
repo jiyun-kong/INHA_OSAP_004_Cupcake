@@ -7,7 +7,7 @@
 #include "avl_tree.hpp"
 #include <iostream>
 
-void AvlTree::printRank(int key) {
+void AvlTree::print_rank(const int& key) {
     // Initialize depth and rank
     int depth = 0;
     int rank = 0;
@@ -34,7 +34,7 @@ void AvlTree::printRank(int key) {
         }
     }
 
-    std::cout << depth << " " << rank + 1 << std::endl;  // Add 1 to adhere to the definition of rank (1-based index)
+    std::cout << depth << " " << rank + 1 << "\n";  // Add 1 to adhere to the definition of rank (1-based index)
 }
 
 

@@ -51,7 +51,7 @@ public:
                           // return 0
   void insert(const int &x);
 
-  void printRank(int key);
+  void print_rank(const int &key);
 
   void erase(int key);
 
