@@ -58,6 +58,64 @@ TEST_F(AvlTreeTest, InsertMaintainStructure)
   EXPECT_EQ(test_tree.find(10), 0); // Test a specific key in the Avl Tree
 }
 
+TEST_F(AvlTreeTest,EraseTest)
+{
+  test_tree.insert(1);
+  test_tree.insert(100000);
+  test_tree.insert(2);
+  test_tree.insert(9);
+  test_tree.insert(3);
+  test_tree.insert(8);
+  test_tree.insert(4);
+  test_tree.insert(7);
+  test_tree.insert(5);
+  test_tree.insert(6);
+
+  test_tree.erase(100000);
+ 
+  EXPECT_EQ(test_tree.get_size(),9);
+
+  test_tree.erase(1);
+  EXPECT_EQ(test_tree.get_size(),8);
+  
+  test_tree.erase(5);
+  EXPECT_EQ(test_tree.get_size(),7);
+}
+
+TEST_F(AvlTreeTest,PrintRankTest)
+{
+  test_tree.insert(1);
+  test_tree.insert(100000);
+  test_tree.insert(5);
+  test_tree.insert(10);
+
+  testing::internal::CaptureStdout();
+  test_tree.print_rank(1);
+  std::string output1 = testing::internal::GetCapturedStdout();
+  EXPECT_EQ(output1,"1 1\n");
+
+  testing::internal::CaptureStdout();
+  test_tree.print_rank(100000);
+  std::string output2 = testing::internal::GetCapturedStdout();
+  EXPECT_EQ(output2,"1 4\n");
+
+  testing::internal::CaptureStdout();
+  test_tree.print_rank(10);
+  std::string output3 = testing::internal::GetCapturedStdout();
+  EXPECT_EQ(output3,"2 3\n");
+
+  testing::internal::CaptureStdout();
+  test_tree.print_rank(5);
+  std::string output4 = testing::internal::GetCapturedStdout();
+  EXPECT_EQ(output4,"0 2\n");
+
+  testing::internal::CaptureStdout();
+  test_tree.print_rank(4);
+  std::string output5 = testing::internal::GetCapturedStdout();
+  EXPECT_EQ(output5,"0\n");
+
+}
+
 int main(int argc, char **argv)
 {
   testing::InitGoogleTest(&argc, argv);
