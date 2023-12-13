@@ -23,6 +23,6 @@ Node *AvlTree::recursive_insert(Node *node_ptr, const int &key) {
   node_ptr->set_height(std::max(get_node_height(node_ptr->get_left_child()),
                                 get_node_height(node_ptr->get_right_child())) + 1);
 
-  rebalance_subtree(node_ptr,key);
+  rebalance_subtree(node_ptr);
   return node_ptr;
 }//recursively move to a proper child position & make new node & update height & rebalance tree

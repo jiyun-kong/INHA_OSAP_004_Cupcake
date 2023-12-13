@@ -26,11 +26,21 @@ Error resolved after adding the following code.
 - **Code Review** by. Sungrae Kim
 - **Google Test, implement main() for Basic functions** by. Jiyun Kong
 
+### Issue 3 : Time Limit
+- There's a time limit issue when we test at DomJudge server.
+- Probable Cause : Invalid implementation of Minimum(), Maximum() or main() or get_depth() 
+- SungRae found that get_depth() is O(n) so replace get_depth() into find()
+<p align="Center">
+  <img src="https://github.com/jiyun-kong/INHA_OSAP_004_Cupcake/assets/62550230/a19f54b3-16b1-4d11-87b3-f980db54fc68" title="Time Limit issue"/>
+</p><br/>
+
+  
 ## 3rd Week (Nov.21 ~ Nov.26)
-- **Implementation : rank()** by. Jiyun Kong
+- **Implementation : rank()** by. Bond Channavong
 - **Implementation : erase()** by. GyuJun Cho
-- **Code Review** by. Bong Channavong, Jiyun Kong
-- **Google Test, implement main() for Advanced functions** by. Sungrae 
+- **implement main() for Advanced functions, applying Design Pattern** by. Jiyun Long
+- **Code Review** by. GyuJun Cho, Jiyun Kong
+- **Google Test** by. Sungrae Kim
 
 ## 4th Week (Dec.9 ~ Dec.15)
 
