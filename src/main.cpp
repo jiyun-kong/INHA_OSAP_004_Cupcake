@@ -1,10 +1,10 @@
 /*
-* Copyright 2023 CUPCAKE Team, Inha Univ 
-* released under GPL 3.0 License
-* Contributor of this file : SungraeKim (23/11/11), JiyunKong (23/11/19)
-*/
-#include <iostream>
+ * Copyright 2023 CUPCAKE Team, Inha Univ
+ * released under GPL 3.0 License
+ * Contributor of this file : SungraeKim (23/11/11), JiyunKong (23/11/19), JiyunKong (23/12/14)
+ */
 #include "include/avl_tree.hpp"
+#include <iostream>
 
 using namespace std;
 
@@ -14,14 +14,13 @@ int main() {
   cin.tie(NULL);
   cout.tie(NULL);
 
- 
   int T;
   cin >> T;
-  for (int i=0; i<T; i++) { // repeat for test case T times
+  for (int i = 0; i < T; i++) { // repeat for test case T times
     AvlTree tree;
     int Q;
     cin >> Q;
-    for (int j=0; j<Q; j++) { // repeat for command Q times
+    for (int j = 0; j < Q; j++) { // repeat for command Q times
       string cmd;
       cin >> cmd;
 
@@ -50,11 +49,20 @@ int main() {
         int value;
         cin >> value;
         tree.insert(value);
-        cout<<tree.find(value)<<"\n";
-      } 
+        cout << tree.find(value) << "\n";
+      } else if (cmd == "rank") {
+        int node;
+        cin >> node;
+
+        tree.print_rank(node);
+      } else if (cmd == "erase") {
+        int node;
+        cin >> node;
+
+        tree.erase(node);
+      }
     }
   }
 
   return 0;
 }
-
