@@ -78,3 +78,4 @@ Node *AvlTree::erase_node(Node* root, int key, int& depth) {
 
     return root;
 }
+

@@ -11,3 +11,4 @@ Node *AvlTree::find_min_node(Node* node) const {
     }
     return node;
 }
+
