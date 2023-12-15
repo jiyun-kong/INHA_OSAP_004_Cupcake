@@ -43,4 +43,10 @@ Error resolved after adding the following code.
 - **Google Test** by. Sungrae Kim
 
 ## 4th Week (Dec.9 ~ Dec.15)
+- **Implementation : rank()** by. Bong Channavong
+- **Implementation : erase()** by. Bong Chnnavong
+- **implement main() for Advanced functions, applying Design Pattern** by. Jiyun Kong
+- **Code Review** by. Sungrae Kim, Jiyun Kong
+- **Google Test** by. Sungrae Kim
+
 
