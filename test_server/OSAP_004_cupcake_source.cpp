@@ -283,13 +283,12 @@ void AvlTree::print_rank(const int &key)
         if (key < current->get_key())
         {
             current = current->get_left_child();
-            depth++;
         }
         else if (key > current->get_key())
         {
             // If the key is greater than the current node's key,
             // add the rank of the left subtree plus one, move to the right subtree, and increment depth
-            rank += (current->get_left_child() != nullptr ? current->get_left_child()->get_height() : 0) + 1;
+            rank += 1 + (current->get_left_child() != nullptr ? current->get_left_child()->get_height() : 0);
             current = current->get_right_child();
             depth++;
         }
